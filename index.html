@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カタチヤ | 開業時の「見た目」と「伝え方」をまとめて整える</title>
+  <meta name="description" content="ロゴ・ホームページ・名刺を一括で制作。サロンの世界観や強みを言葉にしながら、開業直後から信頼されるブランドの土台をつくります。基本パッケージ330,000円（税込）">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:       #E07830;
+      --orange-hover: #C5681A;
+      --orange-bg:    #FDF3EB;
+      --cream:        #FAF8F5;
+      --cream2:       #F5F0EA;
+      --text:         #222222;
+      --text-mid:     #666666;
+      --text-light:   #999999;
+      --border:       #E2D9CE;
+      --border-light: #EDE6DF;
+      --white:        #FFFFFF;
+      --line-green:   #06C755;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    /* ──────────────────────────────
+       HEADER
+    ────────────────────────────── */
+    .header {
+      position: sticky;
+      top: 0; z-index: 200;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 32px;
+      height: 60px;
+      display: flex; align-items: center; gap: 0;
+    }
+    .logo {
+      display: flex; flex-direction: column;
+      text-decoration: none; color: var(--text);
+      margin-right: auto;
+      line-height: 1.2;
+    }
+    .logo-name {
+      font-size: 20px; font-weight: 700;
+      letter-spacing: 0.05em;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .logo-name svg { width: 18px; height: 18px; }
+    .logo-tag { font-size: 10px; color: var(--text-light); }
+
+    .gnav {
+      display: flex; gap: 28px;
+      list-style: none;
+      margin-right: 28px;
+    }
+    .gnav a {
+      font-size: 13px; color: var(--text-mid);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .gnav a:hover { color: var(--text); }
+
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--orange);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 13px; font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-cta:hover { background: var(--orange-hover); }
+
+    /* ──────────────────────────────
+       HERO
+    ────────────────────────────── */
+    .hero {
+      background: var(--cream);
+      padding: 56px 32px 72px;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-h1 {
+      font-size: 34px; font-weight: 700;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+    .hero-h1 em { font-style: normal; color: var(--orange); }
+
+    .hero-desc {
+      font-size: 14px; color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .hero-brand-row {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .hero-brand-name {
+      font-size: 16px; font-weight: 700;
+      border-right: 1px solid var(--border);
+      padding-right: 10px;
+    }
+    .hero-brand-sub { font-size: 13px; color: var(--text-mid); }
+
+    .hero-price-label {
+      font-size: 12px; color: var(--text-mid);
+      margin-bottom: 2px;
+    }
+    .hero-price {
+      font-size: 42px; font-weight: 700;
+      color: var(--orange);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .hero-price small { font-size: 16px; }
+    .hero-price-note { font-size: 11px; color: var(--text-light); margin-bottom: 18px; }
+
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-bottom: 24px;
+    }
+    .hero-tags span {
+      border: 1px solid var(--border);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 12px; color: var(--text-mid);
+      background: var(--white);
+    }
+
+    .btn-line-hero {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 16px; font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-bottom: 8px;
+    }
+    .btn-line-hero:hover { background: var(--orange-hover); }
+    .btn-line-hero svg { width: 20px; height: 20px; }
+    .btn-line-hero .arrow { font-size: 12px; margin-left: 4px; }
+
+    .hero-note { font-size: 11px; color: var(--text-light); }
+
+    .hero-img-wrap {
+      position: relative;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .hero-badge {
+      position: absolute;
+      top: -12px; right: -12px;
+      width: 100px; height: 100px;
+      background: var(--orange-bg);
+      border: 1px solid var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-size: 11px; font-weight: 700;
+      line-height: 1.4;
+      color: var(--orange);
+      padding: 12px;
+    }
+
+    /* ──────────────────────────────
+       SECTION COMMONS
+    ────────────────────────────── */
+    .section { padding: 72px 32px; }
+    .section-bg { background: var(--cream); }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .sec-title {
+      font-size: 26px; font-weight: 700;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .sec-title em { font-style: normal; color: var(--orange); }
+
+    .sec-sub {
+      text-align: center;
+      font-size: 13px; color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    /* ──────────────────────────────
+       PAIN POINTS
+    ────────────────────────────── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+    .pain-item {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      gap: 12px;
+    }
+    .pain-icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .pain-icon svg { width: 32px; height: 32px; stroke: var(--text-mid); stroke-width: 1.2; fill: none; }
+    .pain-label {
+      font-size: 12px; color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    /* ──────────────────────────────
+       CONCEPT
+    ────────────────────────────── */
+    .concept-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .concept-img {
+      overflow: hidden;
+    }
+    .concept-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .concept-content {
+      padding: 60px 56px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .concept-title {
+      font-size: 24px; font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .concept-title em { font-style: normal; color: var(--orange); }
+    .concept-body {
+      font-size: 14px; color: var(--text-mid);
+      line-height: 1.9;
+    }
+    .concept-body p + p { margin-top: 12px; }
+
+    /* ──────────────────────────────
+       VALUE PROP
+    ────────────────────────────── */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .value-item {
+      text-align: center;
+      padding: 28px 16px;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+    }
+    .value-num {
+      font-size: 11px; font-weight: 700;
+      color: var(--text-light);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .value-icon {
+      width: 52px; height: 52px;
+      margin: 0 auto 14px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .value-icon svg { width: 26px; height: 26px; stroke: var(--orange); stroke-width: 1.4; fill: none; }
+    .value-name {
+      font-size: 14px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .value-desc {
+      font-size: 12px; color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    /* ──────────────────────────────
+       PACKAGE CONTENTS
+    ────────────────────────────── */
+    .pkg-title { margin-bottom: 40px; }
+
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .pkg-col {
+      padding: 32px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .pkg-col:last-child { border-right: none; }
+
+    .pkg-col-title {
+      font-size: 15px; font-weight: 700;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--orange);
+      margin-bottom: 20px;
+    }
+    .pkg-col-img {
+      margin-bottom: 16px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .pkg-col-img img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .pkg-col-desc {
+      font-size: 13px; color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .pkg-checklist { list-style: none; }
+    .pkg-checklist li {
+      font-size: 12px; color: var(--text-mid);
+      padding: 4px 0;
+      display: flex; gap: 6px; align-items: flex-start;
+    }
+    .pkg-checklist li::before {
+      content: "✓";
+      color: var(--orange); font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .pkg-note {
+      text-align: center;
+      font-size: 12px; color: var(--text-mid);
+      padding: 12px;
+      background: var(--cream);
+      border-radius: 4px;
+    }
+
+    /* Package image grid (HP mockup) */
+    .pkg-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .pkg-img-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    /* ──────────────────────────────
+       PROCESS FLOW
+    ────────────────────────────── */
+    .process-wrap {
+      overflow-x: auto;
+    }
+    .process-flow {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      min-width: 900px;
+    }
+    .process-step {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      flex: 1;
+    }
+    .process-top {
+      display: flex; align-items: center;
+      width: 100%;
+    }
+    .process-circle {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--white);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 9px; font-weight: 700;
+      color: var(--text-light);
+      gap: 1px;
+    }
+    .process-circle span { font-size: 10px; color: var(--text-mid); font-weight: 700; }
+    .process-arrow {
+      flex: 1; height: 1px; background: var(--border);
+      position: relative;
+    }
+    .process-arrow::after {
+      content: "";
+      position: absolute; right: -1px; top: 50%;
+      transform: translateY(-50%);
+      border: 4px solid transparent;
+      border-left-color: var(--border);
+    }
+    .process-step:last-child .process-arrow { display: none; }
+    .process-label {
+      font-size: 11px; color: var(--text-mid);
+      line-height: 1.4; margin-top: 10px;
+      width: 100%;
+    }
+    .process-label strong { font-size: 12px; color: var(--text); display: block; }
+
+    /* ──────────────────────────────
+       PRICING
+    ────────────────────────────── */
+    .price-table {
+      display: grid;
+      grid-template-columns: 240px 1fr 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .price-col {
+      padding: 32px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .price-col:last-child { border-right: none; }
+
+    .price-col-head {
+      font-size: 13px; font-weight: 700;
+      text-align: center;
+      background: var(--cream2);
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      margin: -32px -28px 24px;
+    }
+
+    .price-main-label {
+      font-size: 12px; color: var(--text-mid);
+      margin-bottom: 4px;
+    }
+    .price-amount {
+      font-size: 40px; font-weight: 700;
+      color: var(--orange); line-height: 1.1;
+    }
+    .price-amount small { font-size: 15px; }
+    .price-amount-note { font-size: 11px; color: var(--text-light); margin-bottom: 20px; }
+    .price-desc {
+      font-size: 12px; color: var(--text-mid);
+      line-height: 1.7; margin-bottom: 16px;
+    }
+    .price-pay {
+      font-size: 10px; color: var(--text-light);
+    }
+
+    .check-list { list-style: none; }
+    .check-list li {
+      font-size: 13px; color: var(--text-mid);
+      padding: 6px 0;
+      border-bottom: 1px dotted var(--border-light);
+      display: flex; gap: 6px; align-items: flex-start;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before {
+      content: "✓";
+      color: var(--orange); font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .num-list { list-style: none; }
+    .num-list li {
+      font-size: 13px; color: var(--text-mid);
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--border-light);
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .num-list li:last-child { border-bottom: none; }
+    .num-list li .n {
+      font-size: 11px; font-weight: 700; color: var(--orange);
+      flex-shrink: 0; padding-top: 2px;
+    }
+
+    /* ──────────────────────────────
+       OPTIONS
+    ────────────────────────────── */
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .option-item {
+      text-align: center;
+      padding: 20px 12px 16px;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      background: var(--white);
+    }
+    .option-icon {
+      width: 44px; height: 44px;
+      margin: 0 auto 10px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .option-icon svg { width: 22px; height: 22px; stroke: var(--text-mid); stroke-width: 1.4; fill: none; }
+    .option-label {
+      font-size: 11px; color: var(--text-mid);
+      line-height: 1.5;
+    }
+    .option-note {
+      text-align: center; font-size: 11px; color: var(--text-light);
+    }
+
+    /* ──────────────────────────────
+       FAQ
+    ────────────────────────────── */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .faq-col {
+      padding: 24px 20px;
+      border-right: 1px solid var(--border);
+    }
+    .faq-col:last-child { border-right: none; }
+    .faq-q {
+      font-size: 13px; font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      display: flex; gap: 6px; align-items: flex-start;
+      line-height: 1.5;
+    }
+    .faq-q .q-mark {
+      color: var(--orange); font-weight: 700;
+      flex-shrink: 0;
+    }
+    .faq-a {
+      font-size: 12px; color: var(--text-mid);
+      line-height: 1.7;
+      display: flex; gap: 6px; align-items: flex-start;
+    }
+    .faq-a .a-mark {
+      color: var(--text-light); font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ──────────────────────────────
+       FINAL CTA
+    ────────────────────────────── */
+    .cta-section {
+      background: var(--cream);
+      padding: 0;
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      min-height: 360px;
+    }
+    .cta-left {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 60px 56px;
+      position: relative;
+    }
+    .cta-left-bg {
+      position: absolute; inset: 0;
+      overflow: hidden;
+    }
+    .cta-left-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+    }
+    .cta-content { position: relative; z-index: 1; }
+    .cta-title {
+      font-size: 24px; font-weight: 700;
+      line-height: 1.5; margin-bottom: 12px;
+    }
+    .cta-desc {
+      font-size: 14px; color: var(--text-mid);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .cta-btns { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .btn-line-main {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--line-green);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 15px; font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-line-main:hover { background: #05A847; }
+    .btn-line-main svg { width: 18px; height: 18px; }
+    .btn-service {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--orange);
+      color: var(--white);
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-size: 14px; font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-service:hover { background: var(--orange-hover); }
+
+    .cta-right {
+      background: var(--cream2);
+      border-left: 1px solid var(--border);
+      padding: 40px 36px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .cta-right-title {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-checklist { list-style: none; }
+    .cta-checklist li {
+      font-size: 13px; color: var(--text-mid);
+      padding: 8px 0;
+      display: flex; gap: 8px; align-items: flex-start;
+      border-bottom: 1px dotted var(--border-light);
+    }
+    .cta-checklist li:last-child { border-bottom: none; }
+    .cta-checklist li::before {
+      content: "✓"; color: var(--orange); font-weight: 700; flex-shrink: 0;
+    }
+
+    /* ──────────────────────────────
+       FOOTER
+    ────────────────────────────── */
+    .footer {
+      background: #1A1A1A; color: rgba(255,255,255,0.6);
+      padding: 48px 32px 28px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 32px; margin-bottom: 32px;
+      padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-logo { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .footer-tag { font-size: 11px; }
+    .footer-nav {
+      display: flex; gap: 24px; list-style: none; flex-wrap: wrap;
+      align-self: center;
+    }
+    .footer-nav a { font-size: 12px; color: rgba(255,255,255,0.55); text-decoration: none; }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-copy { text-align: center; font-size: 11px; max-width: 1200px; margin: 0 auto; }
+
+    /* ──────────────────────────────
+       RESPONSIVE
+    ────────────────────────────── */
+    @media (max-width: 1024px) {
+      .pain-grid { grid-template-columns: repeat(3, 1fr); }
+      .value-grid { grid-template-columns: repeat(3, 1fr); }
+      .price-table { grid-template-columns: 1fr 1fr; }
+      .option-grid { grid-template-columns: repeat(4, 1fr); }
+      .faq-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .gnav { display: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-h1 { font-size: 26px; }
+      .concept-inner { grid-template-columns: 1fr; }
+      .concept-content { padding: 36px 24px; }
+      .pkg-grid { grid-template-columns: 1fr; }
+      .price-table { grid-template-columns: 1fr; }
+      .option-grid { grid-template-columns: repeat(3, 1fr); }
+      .faq-grid { grid-template-columns: 1fr; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .section { padding: 52px 20px; }
+    }
+    @media (max-width: 480px) {
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+      .value-grid { grid-template-columns: 1fr 1fr; }
+      .option-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <p class="logo-name">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3C9 3 7 5 7 7.5C7 10 9 12 12 14C15 12 17 10 17 7.5C17 5 15 3 12 3Z"/>
+          <path d="M12 14C12 17 10 20 8 21M12 14C12 17 14 20 16 21"/>
+        </svg>
+        カタチヤ
+      </p>
+      <p class="logo-tag">かたちから、お客をつくる。</p>
+    </a>
+    <nav>
+      <ul class="gnav">
+        <li><a href="#service">サービス内容</a></li>
+        <li><a href="#flow">制作の流れ</a></li>
+        <li><a href="#price">料金プラン</a></li>
+        <li><a href="#option">オプション</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+    <a href="https://lin.ee/6SVzhDN" target="_blank" rel="noopener" class="btn-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.95 10.16C19.95 6.05 15.84 2.7 10.79 2.7S1.63 6.05 1.63 10.16c0 3.7 3.28 6.8 7.71 7.39.3.07.71.2.81.45.09.24.06.6.03.84l-.13.79c-.04.23-.19.91.8.5s5.31-3.13 7.25-5.36c1.34-1.47 1.86-2.96 1.86-4.61z"/></svg>
+      LINEで無料相談する
+    </a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- Left -->
+    <div>
+      <h1 class="hero-h1">
+        開業時の<em>"見た目"</em>と<em>"伝え方"</em>を、<br>
+        まとめて整えませんか？
+      </h1>
+      <p class="hero-desc">
+        ロゴ・ホームページ・名刺を一括で制作。<br>
+        サロンの世界観や強みを言葉にしながら、<br>
+        開業直後から信頼されるブランドの土台をつくります。
+      </p>
+      <div class="hero-brand-row">
+        <span class="hero-brand-name">カタチヤ</span>
+        <span class="hero-brand-sub">開業クリエイティブパッケージ</span>
+      </div>
+      <p class="hero-price-label">基本パッケージ価格</p>
+      <p class="hero-price">330,000<small>円</small><small style="font-size:14px">（税込）</small></p>
+      <div class="hero-tags">
+        <span>美容室</span>
+        <span>ネイルサロン</span>
+        <span>アイラッシュサロン</span>
+        <span>エステサロン</span>
+        <span>など</span>
+      </div>
+      <a href="https://lin.ee/6SVzhDN" target="_blank" rel="noopener" class="btn-line-hero">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.95 10.16C19.95 6.05 15.84 2.7 10.79 2.7S1.63 6.05 1.63 10.16c0 3.7 3.28 6.8 7.71 7.39.3.07.71.2.81.45.09.24.06.6.03.84l-.13.79c-.04.23-.19.91.8.5s5.31-3.13 7.25-5.36c1.34-1.47 1.86-2.96 1.86-4.61z"/></svg>
+        LINEで無料相談する
+        <span class="arrow">›</span>
+      </a>
+      <p class="hero-note">相談・資料請求はすべて無料です。</p>
+    </div>
+    <!-- Right -->
+    <div class="hero-img-wrap">
+      <div class="hero-badge">開業準備中の<br>サロンオーナーを<br>トータルサポート</div>
+      <img
+        src="../katachiya_high_quality_photo_assets_webp/01_fv_pc_smartphone_brand_mockup.webp"
+        alt="カタチヤ ブランディングパッケージ実例 — PCとスマートフォンのモックアップ"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PAIN POINTS
+═══════════════════════════════════════════ -->
+<section class="section" id="pain">
+  <div class="container">
+    <h2 class="sec-title">開業準備で、こんなお悩みありませんか？</h2>
+    <div class="sec-sub" style="margin-bottom:40px"></div>
+    <div class="pain-grid">
+      <!-- 1 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="5"/><path d="M8 28c0-4.4 3.6-8 8-8s8 3.6 8 8"/><path d="M22 8c1 1.5 1.5 3 1 5"/><path d="M24 6c2 2 3 5 2 8"/></svg>
+        </div>
+        <p class="pain-label">ロゴをどう作ればいいか分からない</p>
+      </div>
+      <!-- 2 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="16" rx="2"/><path d="M12 22v4m8-4v4m-10 0h12"/><circle cx="16" cy="14" r="2"/><path d="M16 10v1m0 5v1"/></svg>
+        </div>
+        <p class="pain-label">HPに何を載せれば<br>いいか分からない</p>
+      </div>
+      <!-- 3 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><rect x="8" y="4" width="16" height="24" rx="3"/><path d="M13 8h6m-3 16v.01"/><rect x="11" y="10" width="10" height="8" rx="1"/></svg>
+        </div>
+        <p class="pain-label">Instagramはあるけど<br>予約につながるか不安</p>
+      </div>
+      <!-- 4 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><rect x="4" y="9" width="24" height="14" rx="2"/><path d="M4 13h24M8 18h4m6 0h4"/></svg>
+        </div>
+        <p class="pain-label">名刺やショップカードの<br>デザインに統一感がない</p>
+      </div>
+      <!-- 5 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><path d="M16 4l2 6h6l-5 4 2 6-5-3-5 3 2-6-5-4h6z"/></svg>
+        </div>
+        <p class="pain-label">開業直後から信頼される<br>見た目にしたい</p>
+      </div>
+      <!-- 6 -->
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 32 32"><path d="M16 4C10 4 6 9 8 15c1 4 5 7 8 9 3-2 7-5 8-9 2-6-2-11-8-11z"/><circle cx="16" cy="14" r="3"/></svg>
+        </div>
+        <p class="pain-label">サロンの雰囲気や強みを<br>うまく表現できない</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONCEPT
+═══════════════════════════════════════════ -->
+<section class="section-bg">
+  <div class="concept-inner">
+    <div class="concept-img">
+      <img
+        src="../katachiya_high_quality_photo_assets_webp/02_salon_owner_writing_no_text.webp"
+        alt="サロンオーナー 開業準備"
+        style="min-height:400px;"
+      >
+    </div>
+    <div class="concept-content">
+      <h2 class="concept-title">
+        サロンは、来店前の<em>印象</em>で<br>選ばれています。
+      </h2>
+      <div class="concept-body">
+        <p>お客様は予約する前に、Instagram、Googleマップ、ホームページ、口コミ、名刺など、さまざまな情報を見ています。</p>
+        <p>そのときに印象がバラバラだったり、情報が不足していたりすると、技術力が高くても予約前に離脱されてしまう可能性があります。</p>
+        <p>開業時の「見た目」と「伝え方」を整えることは、お客様に安心して選んでもらうための大切な土台です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     VALUE PROPOSITION
+═══════════════════════════════════════════ -->
+<section class="section" id="service">
+  <div class="container">
+    <h2 class="sec-title">
+      カタチヤなら、開業時に必要な<br>
+      見た目と言葉をまとめて整えられます。
+    </h2>
+    <p class="sec-sub">サロンの価値が伝わる状態をつくり、開業直後から信頼されるブランドの土台をつくります。</p>
+    <div class="value-grid">
+      <!-- 01 -->
+      <div class="value-item">
+        <p class="value-num">01</p>
+        <div class="value-icon">
+          <svg viewBox="0 0 26 26"><path d="M13 3l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="value-name">ロゴ制作</p>
+        <p class="value-desc">サロンのコンセプトや世界観を表現するロゴを制作</p>
+      </div>
+      <!-- 02 -->
+      <div class="value-item">
+        <p class="value-num">02</p>
+        <div class="value-icon">
+          <svg viewBox="0 0 26 26"><rect x="2" y="4" width="22" height="14" rx="2"/><path d="M9 18v3m8-3v3m-9 0h10"/></svg>
+        </div>
+        <p class="value-name">ホームページ制作</p>
+        <p class="value-desc">必要な情報を整理したシンプルに伝えるホームページを制作</p>
+      </div>
+      <!-- 03 -->
+      <div class="value-item">
+        <p class="value-num">03</p>
+        <div class="value-icon">
+          <svg viewBox="0 0 26 26"><rect x="3" y="7" width="20" height="12" rx="2"/><path d="M3 11h20M7 15h4"/></svg>
+        </div>
+        <p class="value-name">名刺・ショップカード制作</p>
+        <p class="value-desc">初回来店や紹介で使える名刺・ショップカードをデザイン</p>
+      </div>
+      <!-- 04 -->
+      <div class="value-item">
+        <p class="value-num">04</p>
+        <div class="value-icon">
+          <svg viewBox="0 0 26 26"><path d="M4 6h18v10a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/><path d="M8 21l5-3 5 3"/><path d="M9 11h8M9 14h5"/></svg>
+        </div>
+        <p class="value-name">初回ヒアリング</p>
+        <p class="value-desc">サロンのお悩みや想いを言語化し、方向性を一緒に整理</p>
+      </div>
+      <!-- 05 -->
+      <div class="value-item">
+        <p class="value-num">05</p>
+        <div class="value-icon">
+          <svg viewBox="0 0 26 26"><rect x="4" y="3" width="18" height="20" rx="2"/><path d="M8 8h10M8 12h10M8 16h6"/><path d="M17 16l2 2 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <p class="value-name">ブランドの方向性整理</p>
+        <p class="value-desc">世界観・ターゲット・強みを整理し、統一のあるブランドに</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PACKAGE CONTENTS
+═══════════════════════════════════════════ -->
+<section class="section section-bg" id="package">
+  <div class="container">
+    <h2 class="sec-title pkg-title">基本パッケージに含まれる内容</h2>
+    <div class="pkg-grid">
+      <!-- Col 1: Logo -->
+      <div class="pkg-col">
+        <p class="pkg-col-title">ロゴ制作</p>
+        <div class="pkg-col-img">
+          <img src="../katachiya_high_quality_photo_assets_webp/02_package_logo_mockup.webp" alt="ロゴ制作モックアップ">
+        </div>
+        <p class="pkg-col-desc">着板・名刺・ショップカード・SNS・HP・予約サイト・Googleマップなど、あらゆる場面で使えるロゴを制作。</p>
+        <ul class="pkg-checklist">
+          <li>ロゴデザイン（モノクロ・カラー）</li>
+          <li>名刺データ納品（ai / png / jpg 等）</li>
+          <li>ロゴ使用ガイド（簡易版）</li>
+        </ul>
+      </div>
+      <!-- Col 2: Homepage -->
+      <div class="pkg-col">
+        <p class="pkg-col-title">ホームページ制作</p>
+        <div class="pkg-img-grid">
+          <img src="../katachiya_high_quality_photo_assets_webp/03_package_homepage_mockup.webp" alt="ホームページモックアップ PC">
+          <img src="../katachiya_high_quality_photo_assets_webp/01_pc_smartphone_mockup_no_text.webp" alt="ホームページモックアップ SP">
+        </div>
+        <p class="pkg-col-desc">開業初期に必要な情報を整理した、スマホ対応のホームページを制作。</p>
+        <ul class="pkg-checklist">
+          <li>トップページ+下層ページ（例：5〜7ページ）</li>
+          <li>メニュー・料金・店舗情報・アクセスなど機能</li>
+          <li>お問い合わせ・LINE・予約導線の設置</li>
+        </ul>
+      </div>
+      <!-- Col 3: Card -->
+      <div class="pkg-col">
+        <p class="pkg-col-title">名刺・ショップカード制作</p>
+        <div class="pkg-img-grid">
+          <img src="../katachiya_high_quality_photo_assets_webp/04_package_card_mockup.webp" alt="名刺モックアップ">
+          <img src="../katachiya_high_quality_photo_assets_webp/05_business_card_mockup_no_text.webp" alt="ショップカードモックアップ">
+        </div>
+        <p class="pkg-col-desc">初回来店、紹介、巡回営業などで活躍する名刺・ショップカードを制作。</p>
+        <ul class="pkg-checklist">
+          <li>名刺/ショップカード 両面デザイン</li>
+          <li>予約QRコード・SNS・LINE情報の掲載</li>
+          <li>印刷用データ納品（入稿サポート可）</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pkg-note">上記すべてに、初回ヒアリング・ブランドの方向性整理が含まれます。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PROCESS FLOW
+═══════════════════════════════════════════ -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2 class="sec-title" style="margin-bottom:40px">制作の流れ</h2>
+    <div class="process-wrap">
+      <div class="process-flow">
+        <!-- Step 01 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>01</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>お問い合わせ</strong></p>
+        </div>
+        <!-- Step 02 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>02</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>初回相談</strong></p>
+        </div>
+        <!-- Step 03 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>03</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>ヒアリング</strong>（方向性整理）</p>
+        </div>
+        <!-- Step 04 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>04</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>方向性の整理</strong>（コンセプト設計）</p>
+        </div>
+        <!-- Step 05 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>05</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>ロゴ制作</strong></p>
+        </div>
+        <!-- Step 06 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>06</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>ホームページ制作</strong></p>
+        </div>
+        <!-- Step 07 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>07</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>名刺・ショップカード制作</strong></p>
+        </div>
+        <!-- Step 08 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle"><span>08</span></div>
+            <div class="process-arrow"></div>
+          </div>
+          <p class="process-label"><strong>確認・修正</strong></p>
+        </div>
+        <!-- Step 09 -->
+        <div class="process-step">
+          <div class="process-top">
+            <div class="process-circle" style="border-color:var(--orange);"><span style="color:var(--orange)">09</span></div>
+          </div>
+          <p class="process-label"><strong>納品・公開</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PRICING
+═══════════════════════════════════════════ -->
+<section class="section section-bg" id="price">
+  <div class="container">
+    <h2 class="sec-title" style="margin-bottom:40px">料金プラン</h2>
+    <div class="price-table">
+      <!-- Col 1: Price -->
+      <div class="price-col">
+        <div class="price-col-head">基本パッケージ</div>
+        <p class="price-main-label">基本パッケージ価格</p>
+        <p class="price-amount">330,000<small>円</small></p>
+        <p class="price-amount-note">（税込）</p>
+        <p class="price-desc">ロゴ・ホームページ・名刺個々に依頼すると約70〜80万円相当のお得なパッケージです。<br>開業初期向けにまとめた特別パッケージです。</p>
+        <p class="price-pay">※お支払方法：振り込み / クレジットカード / 分割払い対応</p>
+      </div>
+      <!-- Col 2: Included -->
+      <div class="price-col">
+        <div class="price-col-head">含まれる内容</div>
+        <ul class="check-list">
+          <li>ロゴ制作</li>
+          <li>ホームページ制作（スマホ対応）</li>
+          <li>名刺・ショップカード制作</li>
+          <li>初回ヒアリング・方向性整理</li>
+          <li>簡易アフターサポート（公開後1ヶ月）</li>
+        </ul>
+      </div>
+      <!-- Col 3: Reasons -->
+      <div class="price-col">
+        <div class="price-col-head">カタチヤが選ばれる理由</div>
+        <ul class="num-list">
+          <li><span class="n">01</span>ロゴ・HP・名刺をまとめて整えられる</li>
+          <li><span class="n">02</span>デザイン前にサロンの方向性を整理する</li>
+          <li><span class="n">03</span>開業初期に必要な内容だけに絞っている</li>
+          <li><span class="n">04</span>お客様に安心して予約してもらいやすい</li>
+          <li><span class="n">05</span>創業・開業初期に特化している</li>
+        </ul>
+      </div>
+      <!-- Col 4: Recommended for -->
+      <div class="price-col">
+        <div class="price-col-head">おすすめの方</div>
+        <ul class="check-list">
+          <li>これからサロンを開業する方</li>
+          <li>開業後からロゴやHPをまだ手が回っていない方</li>
+          <li>お客様に安心して予約していただきたい方</li>
+          <li>サロンの世界観をきちんと表現したい方</li>
+          <li>開業直後から信頼のある状態でスタートしたい方</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPTIONS
+═══════════════════════════════════════════ -->
+<section class="section" id="option">
+  <div class="container">
+    <h2 class="sec-title" style="margin-bottom:8px">オプション（必要に応じてご提案します）</h2>
+    <p class="sec-sub">サービスは一例です。サロンの状況に合わせて最適な内容をご提案します。</p>
+    <div class="option-grid">
+      <!-- 1 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><path d="M11 2C7.7 2 5 4.7 5 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.3-2.7-6-6-6z"/><circle cx="11" cy="8" r="2"/></svg>
+        </div>
+        <p class="option-label">Googleマップ<br>初期設定</p>
+      </div>
+      <!-- 2 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><path d="M18 4H4C2.9 4 2 4.9 2 6v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/><path d="M8 11h6M8 14h4"/></svg>
+        </div>
+        <p class="option-label">LINE公式アカウント<br>構築</p>
+      </div>
+      <!-- 3 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><rect x="3" y="3" width="16" height="16" rx="4"/><circle cx="11" cy="11" r="3.5"/><circle cx="16" cy="6" r="1"/></svg>
+        </div>
+        <p class="option-label">Instagram<br>プロフィール設計</p>
+      </div>
+      <!-- 4 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><rect x="2" y="3" width="18" height="16" rx="2"/><path d="M6 7h10M6 11h10M6 15h6"/></svg>
+        </div>
+        <p class="option-label">メニュー表<br>作成</p>
+      </div>
+      <!-- 5 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><path d="M4 2h14l2 4v14a1 1 0 01-1 1H3a1 1 0 01-1-1V6l2-4z"/><path d="M7 7h8M7 11h8M7 15h4"/></svg>
+        </div>
+        <p class="option-label">チラシ、パンフレット<br>制作</p>
+      </div>
+      <!-- 6 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><path d="M3 7h3l2-3h6l2 3h3a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="11" cy="13" r="3"/></svg>
+        </div>
+        <p class="option-label">店舗撮影</p>
+      </div>
+      <!-- 7 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><rect x="2" y="5" width="18" height="12" rx="2"/><path d="M8 9h6M8 13h4"/></svg>
+        </div>
+        <p class="option-label">電飾・サイン<br>デザイン</p>
+      </div>
+      <!-- 8 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><circle cx="5" cy="11" r="2"/><circle cx="17" cy="11" r="2"/><path d="M7 11h8"/><path d="M14 8l3 3-3 3"/></svg>
+        </div>
+        <p class="option-label">予約導線設計</p>
+      </div>
+      <!-- 9 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="9"/><path d="M11 7v4l3 2"/></svg>
+        </div>
+        <p class="option-label">Google Workspace<br>導入サポート</p>
+      </div>
+      <!-- 10 -->
+      <div class="option-item">
+        <div class="option-icon">
+          <svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="3"/><path d="M20 11a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M11 2v2m0 16v2M2 11h2m16 0h2"/></svg>
+        </div>
+        <p class="option-label">ドメイン取得・<br>メールアドレス設定</p>
+      </div>
+    </div>
+    <p class="option-note">※上記は一例です。サロンの状況に合わせて最適な内容をご提案します。</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════ -->
+<section class="section section-bg" id="faq">
+  <div class="container">
+    <h2 class="sec-title" style="margin-bottom:40px">よくある質問</h2>
+    <div class="faq-grid">
+      <div class="faq-col">
+        <p class="faq-q"><span class="q-mark">Q.</span>開業前でも相談できますか？</p>
+        <p class="faq-a"><span class="a-mark">A.</span>はい、開業の段階からご相談いただいています。まだ場所や開店時期が決まっていない段階でも、初回ヒアリングから整えていきます。</p>
+      </div>
+      <div class="faq-col">
+        <p class="faq-q"><span class="q-mark">Q.</span>ロゴだけ、ホームページだけの依頼はできますか？</p>
+        <p class="faq-a"><span class="a-mark">A.</span>基本はパッケージでのご提案ですが、状況に応じて個別のご相談も可能です。</p>
+      </div>
+      <div class="faq-col">
+        <p class="faq-q"><span class="q-mark">Q.</span>ホームページの文章も考えてもらえますか？</p>
+        <p class="faq-a"><span class="a-mark">A.</span>はい、ヒアリング内容をもとに、サロンの魅力が伝わる文章作成もサポートします。</p>
+      </div>
+      <div class="faq-col">
+        <p class="faq-q"><span class="q-mark">Q.</span>写真はどのくらいかかりますか？</p>
+        <p class="faq-a"><span class="a-mark">A.</span>内容や相談スタジオにもよりますが、目安として1〜2ヶ月程度です。</p>
+      </div>
+      <div class="faq-col">
+        <p class="faq-q"><span class="q-mark">Q.</span>InstagramやLINEも整えてもらえますか？</p>
+        <p class="faq-a"><span class="a-mark">A.</span>サロンの場合、InstagramやLINEは必須です。状況に応じてオプションでの追加も可能です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <!-- Left content -->
+      <div class="cta-left">
+        <div class="cta-left-bg">
+          <img src="../katachiya_high_quality_photo_assets_webp/09_salon_lounge_chair_no_text.webp" alt="サロン内装">
+        </div>
+        <div class="cta-content">
+          <h2 class="cta-title">
+            あなたのサロンらしさを、<br>
+            伝わるカタチにしませんか？
+          </h2>
+          <p class="cta-desc">
+            まずは無料でご相談ください。<br>
+            開業の段階でも全然大丈夫です。
+          </p>
+          <div class="cta-btns">
+            <a href="https://lin.ee/6SVzhDN" target="_blank" rel="noopener" class="btn-line-main">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.95 10.16C19.95 6.05 15.84 2.7 10.79 2.7S1.63 6.05 1.63 10.16c0 3.7 3.28 6.8 7.71 7.39.3.07.71.2.81.45.09.24.06.6.03.84l-.13.79c-.04.23-.19.91.8.5s5.31-3.13 7.25-5.36c1.34-1.47 1.86-2.96 1.86-4.61z"/></svg>
+              LINEで無料相談する ›
+            </a>
+            <a href="#service" class="btn-service">
+              サービス内容を見る ›
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Right info -->
+      <div class="cta-right">
+        <p class="cta-right-title">ご相談・資料請求は無料です</p>
+        <ul class="cta-checklist">
+          <li>相談だけでもOK</li>
+          <li>無駄な営業は一切いたしません</li>
+          <li>具体的に決まっていなくても大丈夫</li>
+          <li>開業前の段階でも喜んで対応します</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-logo">カタチヤ</p>
+      <p class="footer-tag">かたちから、お客をつくる。</p>
+    </div>
+    <nav>
+      <ul class="footer-nav">
+        <li><a href="#service">サービス内容</a></li>
+        <li><a href="#flow">制作の流れ</a></li>
+        <li><a href="#price">料金プラン</a></li>
+        <li><a href="#option">オプション</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="https://lin.ee/6SVzhDN" target="_blank" rel="noopener">LINEで相談</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="footer-copy">&copy; 2024 カタチヤ. All rights reserved.</p>
+</footer>
+
+<script>
+  // Smooth scroll with header offset
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

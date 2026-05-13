@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================================================
+       カタチヤ サイトマップ
+       https://katachiya.jp/
+       最終更新: 2024-01-01
+  ============================================================= -->
+
+  <!-- トップページ -->
+  <url>
+    <loc>https://katachiya.jp/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://katachiya.jp/"/>
+  </url>
+
+  <!-- サービス内容 -->
+  <url>
+    <loc>https://katachiya.jp/#service</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- パッケージ詳細 -->
+  <url>
+    <loc>https://katachiya.jp/#package</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 制作実績 -->
+  <url>
+    <loc>https://katachiya.jp/#works</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 料金プラン -->
+  <url>
+    <loc>https://katachiya.jp/#price</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- よくある質問 -->
+  <url>
+    <loc>https://katachiya.jp/#faq</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- お客様の声 -->
+  <url>
+    <loc>https://katachiya.jp/#voice</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

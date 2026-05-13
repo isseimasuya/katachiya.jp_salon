@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カタチヤ サイトマップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #C8965A;
+      --gold-dark:  #A67C52;
+      --cream:      #FAF7F4;
+      --border:     #E8E0D8;
+      --text:       #1A1A1A;
+      --text-mid:   #555;
+      --text-light: #888;
+      --line-green: #06C755;
+      --white:      #fff;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 60px 40px 80px;
+    }
+
+    .page-header {
+      max-width: 1000px;
+      margin: 0 auto 64px;
+    }
+
+    .page-logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .page-logo em { font-style: normal; color: var(--gold); }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .page-sub {
+      font-size: 14px;
+      color: var(--text-mid);
+    }
+
+    /* ─── SITEMAP DIAGRAM ──────────────────────────────── */
+    .sitemap-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Top node */
+    .tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .node-top {
+      background: var(--text);
+      color: var(--white);
+      padding: 18px 40px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.05em;
+      min-width: 240px;
+    }
+
+    .connector-v {
+      width: 2px;
+      height: 32px;
+      background: var(--border);
+      margin: 0 auto;
+    }
+
+    .connector-h-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Horizontal line spanning all children */
+    .connector-h {
+      position: absolute;
+      top: 0;
+      height: 2px;
+      background: var(--border);
+    }
+
+    /* Children row */
+    .children-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 32px;
+    }
+
+    .child-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .node {
+      border-radius: 8px;
+      padding: 14px 20px;
+      text-align: center;
+      min-width: 150px;
+      max-width: 190px;
+      position: relative;
+    }
+
+    .node::before {
+      content: '';
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 32px;
+      background: var(--border);
+    }
+
+    .node-section {
+      background: var(--white);
+      border: 2px solid var(--gold);
+    }
+
+    .node-section .node-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .node-section .node-en {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .node-section .node-anchor {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    .node-external {
+      background: #F0FBF4;
+      border: 2px solid var(--line-green);
+    }
+
+    .node-external .node-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #04A347;
+      margin-bottom: 4px;
+    }
+
+    .node-external .node-en {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--line-green);
+      text-transform: uppercase;
+    }
+
+    .node-external .node-anchor {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 4px;
+      font-weight: 400;
+      word-break: break-all;
+    }
+
+    .node-sub {
+      background: var(--cream);
+      border: 1px solid var(--border);
+    }
+
+    .node-sub .node-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+    }
+
+    /* Sub-children */
+    .sub-children {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-top: 0;
+    }
+
+    .sub-connector-v {
+      width: 2px;
+      height: 20px;
+      background: var(--border);
+    }
+
+    /* ─── TABLE VIEW ───────────────────────────────────── */
+    .table-section {
+      max-width: 1000px;
+      margin: 72px auto 0;
+    }
+
+    .table-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+
+    thead {
+      background: var(--text);
+      color: var(--white);
+    }
+
+    thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+
+    tbody tr:hover { background: var(--cream); }
+
+    tbody td {
+      padding: 14px 20px;
+      vertical-align: top;
+    }
+
+    .td-url {
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--text-mid);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-high { background: #FFF0E0; color: var(--gold-dark); }
+    .badge-mid  { background: #F0FBF4; color: #04A347; }
+    .badge-low  { background: #F5F5F5; color: var(--text-light); }
+
+    /* ─── LEGEND ───────────────────────────────────────── */
+    .legend {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-mid);
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 40px 16px 60px; }
+      .children-row { gap: 12px; }
+      .node { min-width: 120px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <div class="page-header">
+    <p class="page-logo">カタチ<em>ヤ</em></p>
+    <h1 class="page-title">サイトマップ</h1>
+    <p class="page-sub">katachiya.jp の全ページ構成と優先度の一覧</p>
+  </div>
+
+  <!-- ── Tree Diagram ── -->
+  <div class="sitemap-wrap">
+    <div class="tree">
+
+      <!-- Root -->
+      <div class="node-top">🏠 カタチヤ トップページ<br><span style="font-size:12px;font-weight:400;opacity:0.7">katachiya.jp/</span></div>
+      <div class="connector-v"></div>
+
+      <!-- Horizontal connecting line (visual only) -->
+      <div style="width:100%;height:2px;background:var(--border);max-width:860px;margin:0 auto;"></div>
+
+      <!-- Children row -->
+      <div class="children-row">
+
+        <!-- Service -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">サービス内容</p>
+            <p class="node-en">Service</p>
+            <p class="node-anchor">#service</p>
+          </div>
+          <div class="sub-connector-v"></div>
+          <div class="node node-sub" style="margin-top:0;position:relative;">
+            <p style="position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:2px;height:20px;background:var(--border);content:'';display:block;"></p>
+            <p class="node-label">4つの強み</p>
+          </div>
+        </div>
+
+        <!-- Package -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">パッケージ詳細</p>
+            <p class="node-en">Package</p>
+            <p class="node-anchor">#package</p>
+          </div>
+          <div class="sub-connector-v"></div>
+          <div class="node node-sub" style="position:relative;">
+            <p style="position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:2px;height:20px;background:var(--border);content:'';display:block;"></p>
+            <p class="node-label">Lumière パッケージ</p>
+          </div>
+        </div>
+
+        <!-- Works -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">制作実績</p>
+            <p class="node-en">Works</p>
+            <p class="node-anchor">#works</p>
+          </div>
+          <div class="sub-connector-v"></div>
+          <div class="node node-sub" style="position:relative;">
+            <p style="position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:2px;height:20px;background:var(--border);content:'';display:block;"></p>
+            <p class="node-label">ポートフォリオ ギャラリー</p>
+          </div>
+        </div>
+
+        <!-- Voice -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">お客様の声</p>
+            <p class="node-en">Voice</p>
+            <p class="node-anchor">#voice</p>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">料金プラン</p>
+            <p class="node-en">Price</p>
+            <p class="node-anchor">#price</p>
+          </div>
+          <div class="sub-connector-v"></div>
+          <div class="node node-sub" style="position:relative;">
+            <p style="position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:2px;height:20px;background:var(--border);content:'';display:block;"></p>
+            <p class="node-label">ライト / スタンダード / プレミアム</p>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="child-group">
+          <div class="node node-section">
+            <p class="node-label">よくある質問</p>
+            <p class="node-en">FAQ</p>
+            <p class="node-anchor">#faq</p>
+          </div>
+        </div>
+
+        <!-- LINE CTA (external) -->
+        <div class="child-group">
+          <div class="node node-external">
+            <p class="node-label">LINE無料相談</p>
+            <p class="node-en">LINE CTA</p>
+            <p class="node-anchor">lin.ee/6SVzhDN</p>
+          </div>
+        </div>
+
+      </div><!-- /.children-row -->
+    </div><!-- /.tree -->
+  </div><!-- /.sitemap-wrap -->
+
+  <!-- ── Table View ── -->
+  <div class="table-section">
+    <h2 class="table-title">ページ一覧</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ページ名</th>
+          <th>URL / アンカー</th>
+          <th>概要</th>
+          <th>優先度</th>
+          <th>更新頻度</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>トップページ</strong></td>
+          <td class="td-url">katachiya.jp/</td>
+          <td>FV・コンセプト・全セクションへのナビゲーション</td>
+          <td><span class="badge badge-high">1.0 高</span></td>
+          <td>週次</td>
+        </tr>
+        <tr>
+          <td><strong>サービス内容</strong></td>
+          <td class="td-url">katachiya.jp/#service</td>
+          <td>カタチヤが選ばれる4つの理由。ロゴ・Web・SNS・印刷物</td>
+          <td><span class="badge badge-high">0.9 高</span></td>
+          <td>月次</td>
+        </tr>
+        <tr>
+          <td><strong>パッケージ詳細</strong></td>
+          <td class="td-url">katachiya.jp/#package</td>
+          <td>Lumièreパッケージの全収録内容・モックアップ</td>
+          <td><span class="badge badge-high">0.9 高</span></td>
+          <td>月次</td>
+        </tr>
+        <tr>
+          <td><strong>制作実績</strong></td>
+          <td class="td-url">katachiya.jp/#works</td>
+          <td>美容室・エステ・ネイル等の制作ポートフォリオ</td>
+          <td><span class="badge badge-mid">0.8 中</span></td>
+          <td>週次</td>
+        </tr>
+        <tr>
+          <td><strong>お客様の声</strong></td>
+          <td class="td-url">katachiya.jp/#voice</td>
+          <td>開業オーナーからの実際の感想・レビュー</td>
+          <td><span class="badge badge-mid">0.7 中</span></td>
+          <td>月次</td>
+        </tr>
+        <tr>
+          <td><strong>料金プラン</strong></td>
+          <td class="td-url">katachiya.jp/#price</td>
+          <td>ライト / スタンダード / プレミアム 3プランの比較</td>
+          <td><span class="badge badge-mid">0.8 中</span></td>
+          <td>月次</td>
+        </tr>
+        <tr>
+          <td><strong>よくある質問</strong></td>
+          <td class="td-url">katachiya.jp/#faq</td>
+          <td>開業前の相談・制作期間・分割払い等7項目のQ&amp;A</td>
+          <td><span class="badge badge-mid">0.7 中</span></td>
+          <td>月次</td>
+        </tr>
+        <tr>
+          <td><strong>LINE無料相談</strong> <span style="font-size:11px;color:var(--line-green)">外部</span></td>
+          <td class="td-url">lin.ee/6SVzhDN</td>
+          <td>全CTAボタンから遷移するLINE公式アカウント相談窓口</td>
+          <td><span class="badge badge-high">CTA</span></td>
+          <td>常時</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── Legend ── -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#fff;border:2px solid var(--gold);"></div>
+      <span>メインセクション（同一ページ内アンカー）</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#f5f5f5;border:1px solid var(--border);"></div>
+      <span>サブコンテンツ</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#F0FBF4;border:2px solid var(--line-green);"></div>
+      <span>外部リンク（LINE）</span>
+    </div>
+  </div>
+
+  <p style="max-width:1000px;margin:40px auto 0;font-size:12px;color:var(--text-light);">
+    ※ 本サイトマップは katachiya.jp の構成を示したものです。<br>
+    ※ XMLサイトマップ（SEO用）は sitemap.xml をご参照ください。
+  </p>
+
+</body>
+</html>
